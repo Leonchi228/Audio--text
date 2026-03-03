@@ -17,5 +17,10 @@
 Технологический стек: 
 Frontend: Vue.js, Vue Router 4, Pinia.
 Backend: Python, Flask, SQLite.
-Инфраструктура: фронтенд на Vercel, бекенд и БД локально.
+Инфраструктура: frontend на Vercel, backend и БД локально.
+
+Модели данных:
+Сущность: User - основные поля: ID, username, email, password_hash, show_add, api_tier.
+Сущность: API_tier - основные поля: id, name, token_limit.
+Сущность: User_Tokens - основные поля: user_id, balance, last_replenishment_at.
 
