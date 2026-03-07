@@ -6,7 +6,7 @@
 
       <!-- Навигация -->
       <div class="nav-links">
-        <a href="#" class="nav-item active">Главная</a>
+        <a href="#" class="nav-item active">Вторая</a>
         <a href="#" class="nav-item">API</a>
         <a href="#" class="nav-item">Документация</a>
         <a href="#" class="nav-item">Поддержка</a>
