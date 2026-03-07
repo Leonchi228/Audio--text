@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import Header from './Header.vue'
+import Footer from './Footer.vue'
 
 // Состояния
 const file = ref(null)
@@ -166,6 +167,7 @@ const resetAll = () => {
       <p v-if="error" class="error-msg">{{ error }}</p>
     </div>
   </main>
+  <Footer />
 </template>
 
 <style scoped>
