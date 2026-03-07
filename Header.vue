@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <!-- Логотип -->
-      <div class="logo">Транскрибатор</div>
+      <div class="logo">Транскрибат прикинь</div>
 
       <!-- Навигация -->
       <div class="nav-links">
