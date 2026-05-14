@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "vue-toastification/dist/index.css";
+@tailwind utilities;
+
+
+.my-custom-toast-class{
+min-width: 300px !important;
+max-width: 400px !important;
+min-height: 50px !important;
+}
+
+.custom-body-class{
+font-size: 0.9rem !important;
+line-height: 1.2 !important;
+}
