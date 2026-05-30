@@ -20,6 +20,11 @@ const routes = [
     name: 'main',
     component: Main
   },
+    {
+    path: '/main',
+    name: 'main',
+    component: Main
+  },
   {
     path: '/reset-password',
     name: 'reset-password',
