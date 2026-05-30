@@ -6,7 +6,7 @@ const fileInput = ref(null)
 const isDragging = ref(false)
 const isLoading = ref(false)
 
-// Переменные для хранения результата
+
 const resultText = ref('')
 const uploadedFileName = ref('')
 
@@ -49,7 +49,7 @@ const processFile = async (file) => {
     isLoading.value = false 
   }
 
-  // Фоновое сохранение в базу данных Supabase
+  
   try {
     const { data: { session } } = await supabase.auth.getSession()
     if (session && resultText.value) {
@@ -67,7 +67,7 @@ const processFile = async (file) => {
   }
 }
 
-// Сброс состояния для загрузки нового файла
+
 const resetUploader = () => {
   resultText.value = ''
   uploadedFileName.value = ''
