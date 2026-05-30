@@ -48,6 +48,11 @@ const routes = [
     path:'/doc',
     name:'documentation',
     component:()=>import('../views/Documentation.vue')
+  },
+    {
+    path:'/api',
+    name:'api',
+    component:()=>import('../views/API.vue')
   }
 ]
 

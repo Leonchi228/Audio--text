@@ -81,9 +81,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </span>
-            ScribeFlow API (В разработке)
+            ScribeFlow API
           </h2>
-          <p class="text-xs text-orange-600 font-medium mb-6 bg-orange-50 inline-block px-2.5 py-1 rounded-md">Скоро появится</p>
           
           <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Вы сможете автоматизировать процессы транскрибации, отправляя аудиофайлы напрямую на наши эндпоинты. Ниже представлено предварительное руководство для разработчиков.
