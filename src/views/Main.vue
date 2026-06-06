@@ -30,7 +30,7 @@ const processFile = async (file) => {
     const formData = new FormData()
     formData.append('file', file)
 
-    const response = await fetch('http://127.0.0.1:5000/api/main', {
+    const response = await fetch('https://autopostingbot-cuym.onrender.com', {
       method: 'POST',
       body: formData
     })
