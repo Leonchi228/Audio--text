@@ -10,26 +10,23 @@ const toast = useToast()
 
 const transcriptions = ref([])
 const isFetching = ref(false)
-
-// cостояние для полного просмотра в модальном окне
 const selectedItem = ref(null)
 
-// Состояние для быстрого изменения названия
+
 const editingId = ref(null)
 const editTitle = ref('')
 
-// 1. ПОЛУЧЕНИЕ ДАННЫХ ИЗ SUPABASE
+
 const fetchTranscriptions = async () => {
   isFetching.value = true
   try {
     const { data: { session } } = await supabase.auth.getSession()
     if (!session) {
       toast.error("Пожалуйста, войдите в систему")
-      router.push('/login') // Перенаправляем, если сессия сброшена
+      router.push('/login') 
       return
     }
 
-    // Загружаем записи конкретного юзера (сортируем от новых к старым)
     const { data, error } = await supabase
       .from('transcriptions')
       .select('*')
@@ -50,18 +47,16 @@ onMounted(() => {
   fetchTranscriptions()
 })
 
-// 2. РАЗВОРАЧИВАНИЕ (ПРОСМОТР)
 const openViewModal = (item) => {
   selectedItem.value = item
 }
 
-// Копирование в буфер обмена прямо из модалки
+
 const copyToClipboard = (text) => {
   navigator.clipboard.writeText(text)
   toast.success("Текст успешно скопирован!")
 }
 
-// 3. РЕДАКТИРОВАНИЕ (Включение инпута в карточке)
 const startEdit = (item) => {
   editingId.value = item.id
   editTitle.value = item.title
@@ -81,7 +76,7 @@ const saveEdit = async (id) => {
 
     if (error) throw error
 
-    // Обновляем состояние на фронтенде без перезагрузки всей страницы
+
     const item = transcriptions.value.find(t => t.id === id)
     if (item) item.title = editTitle.value
     
@@ -93,7 +88,7 @@ const saveEdit = async (id) => {
   }
 }
 
-// 4. ТВОЙ КОД УДАЛЕНИЯ С ПОДКЛЮЧЕНИЕМ SUPABASE БАЗЫ
+
 const performDelete = async (id) => {
   try {
     const { error } = await supabase
@@ -103,7 +98,7 @@ const performDelete = async (id) => {
 
     if (error) throw error
 
-    // Удаляем из локального массива Vue, чтобы карточка моментально исчезла
+
     transcriptions.value = transcriptions.value.filter(item => item.id !== id)
   } catch (error) {
     toast.error("Ошибка при удалении записи из БД")
@@ -130,7 +125,7 @@ const remove = (id) => {
   });
 }
 
-// Форматирование даты
+
 const formatDate = (isoString) => {
   if (!isoString) return ''
   const date = new Date(isoString)

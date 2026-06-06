@@ -52,7 +52,7 @@ const routes = [
     {
     path:'/api',
     name:'api',
-    component:()=>import('../views/API.vue')
+    component:()=>import('../views/APIч.vue')
   }
 ]
 

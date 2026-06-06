@@ -40,7 +40,7 @@ const processFile = async (file) => {
     }
 
     const result = await response.json()
-    resultText.value = result.text // Записываем текст для вывода
+    resultText.value = result.text 
 
   } catch (error) {
     console.error('Ошибка:', error.message)

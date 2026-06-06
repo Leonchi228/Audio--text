@@ -1,10 +1,9 @@
 <template>
   <nav class="navbar">
     <div class="container">
-      <!-- Логотип -->
+
       <div class="logo">Транскрибатор</div>
 
-      <!-- Навигация -->
       <div class="nav-links">
         <a href="#" class="nav-item active">Главная</a>
         <a href="#" class="nav-item">API</a>
@@ -13,7 +12,7 @@
         <a href="#" class="nav-item">О разработчике</a>
       </div>
 
-      <!-- Кнопка входа -->
+
       <button class="login-btn">Войти</button>
     </div>
   </nav>
